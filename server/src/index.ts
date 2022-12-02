@@ -1,12 +1,17 @@
 import path from 'node:path';
+import http from 'http';
 import express from 'express';
 import mongoose from 'mongoose';
+import { Server } from 'socket.io';
 
 import { router } from './router';
 
+const app = express();
+const server = http.createServer(app);
+export const io = new Server(server);
+
 mongoose.connect('mongodb://root:eduardo156@localhost:27017/waiter?authSource=admin')
   .then(() => {
-    const app = express();
 
     const port = 3001;
 
@@ -19,5 +24,3 @@ mongoose.connect('mongodb://root:eduardo156@localhost:27017/waiter?authSource=ad
     });
   })
   .catch(() => console.log('error'));
-
-// mongodb://root:eduardo156@localhost:27017/library?authSource=admin
