@@ -36,7 +36,7 @@
 - The CORS_ORIGIN is equal *, accept all urls
 - Run the commands
   ```
-    $ yarn add
+    $ yarn install
 
     $ yarn dev
   ```
@@ -61,7 +61,7 @@
 - Open de folder web
 - Run the commands
 ```
-  $ yarn add
+  $ yarn install
 
   $ yarn dev
 ```
@@ -78,7 +78,8 @@
 - Open de folder web
 - Run the commands
 ```
-  $ yarn add
+  $ yarn install
 
   $ yarn start
 ```
+- And scanning qr code with expo go
